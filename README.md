@@ -41,5 +41,5 @@ Gets a translation token from google translate.
 | --- | --- | --- | --- |
 | [cors] | <code>String</code> | <code>&#x27;https://cors.explosionscratc.repl.co/&#x27;</code> | The URL to put before the request URL to google. For example 'https://cors.explosionscratc.repl.co/' (Needs to have the trailing slash) |
 | [seed] | <code>String</code> | <code>Math.floor(performance.now() * 10000000000).toString(36)</code> | A string seed |
-| [storage] | <code>Object</code> | <code>{get: localStorage.getItem, set: localStorage.setItem}</code> | An optional object to store the key in. Pass an object such as this: {get: (item) => 'return this', set: (item, value) => 'set an item to a value'} Defaults to localStorage methods. |
+| [storage] | <code>Object</code> | <code>{get: (i) &#x3D;&gt; localStorage.getItem(i), set: (item, val) &#x3D;&gt; localStorage.setItem(item, val)}</code> | An optional object to store the key in. Pass an object such as this: {get: (item) => 'return this', set: (item, value) => 'set an item to a value'} Defaults to localStorage methods. |
 
