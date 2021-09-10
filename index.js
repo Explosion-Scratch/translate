@@ -46,10 +46,10 @@ await token("https://cors.explosionscratc.repl.co/", "This is a seed, it can be 
 * Gets a translation token from google translate.
 * @param {String} [cors='https://cors.explosionscratc.repl.co/'] The URL to put before the request URL to google. For example 'https://cors.explosionscratc.repl.co/' (Needs to have the trailing slash)
 * @param {String} [seed=Math.floor(performance.now() * 10000000000).toString(36)] A string seed 
-* @param {Object} [storage={get: localStorage.getItem, set: localStorage.setItem}] An optional object to store the key in. Pass an object such as this: {get: (item) => 'return this', set: (item, value) => 'set an item to a value'} Defaults to localStorage methods.
+* @param {Object} [storage={get: (i) => localStorage.getItem(i), set: (item, val) => localStorage.setItem(item, val)}] An optional object to store the key in. Pass an object such as this: {get: (item) => 'return this', set: (item, value) => 'set an item to a value'} Defaults to localStorage methods.
 * @return {Object} Returns an object with the token. {name: 'query param name for use in translate request', value: 'a number that is generated'}
 */
-function token(cors = 'https://cors.explosionscratc.repl.co/', seed = Math.floor(performance.now() * 10000000000).toString(36), storage = {get: localStorage.getItem, set: localStorage.setItem}) {
+function token(cors = 'https://cors.explosionscratc.repl.co/', seed = Math.floor(performance.now() * 10000000000).toString(36), storage = {get: (i) => localStorage.getItem(i), set: (item, val) => localStorage.setItem(item, val)}) {
   function sM(a) {
     var b;
     if (null !== yr) b = yr;
