@@ -6,6 +6,7 @@
 * @returns {Promise.<string>} Returns a promise that is resolved by the translated version.
 */
 function translate(text, opts, token) {
+  return new Promise((resolve, reject) => {
   opts = {
     to: "en",
     text,
@@ -34,7 +35,8 @@ function translate(text, opts, token) {
 
   fetch(
     `https://cors.explosionscratc.repl.co/translate.google.com/translate_a/t?${query.toString()}`
-  ).then((res) => res.json());
+  ).then((res) => res.json()).then(resolve).catch(reject);
+  });
 }
 
 //This is used like this:
