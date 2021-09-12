@@ -6,14 +6,14 @@
  * @returns {Promise.<object>} Returns a promise resolving into an object with the translated text, raw response JSON, the original text, and the target and source languages.
  * @example
  * var translated = await translate("Hello world", "fr");
- * /* ⇒ 
+ * &#47;* ⇒ 
  * {
  *  source: "en", 
  *  original: "Hello world",
  *  translated: "Bonjour le monde",
  *  result: "weird google stuff here"
  * }
- * *\/
+ * *&#47;
  */
 async function translate(text, target, source, proxy) {
   if (typeof text == "object") {
