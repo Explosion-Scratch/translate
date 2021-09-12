@@ -1,10 +1,10 @@
 # Google Translate JavaScript module
 
-This module exposes two functions: the [`token()`](#token) funciton and the [`translate()`](#translate) function. To translate you need a google translate token. From there it's pretty easy!
+This module exposes a [`translate()`](#translate) function.
 
 # If it doesn't work
 
-If it gives you a `429` error in console then just wait, it's probably because I was playing with it and made google think my cors server was causing some bad traffic. This should undo in a bit.
+If it gives you a `429` error in console then just wait, it's probably because you were using it too much. Try adding a proxy, such as `https://cors.explosionscratc.repl.co` in the options.
 
 # Documentation:
 
