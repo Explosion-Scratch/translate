@@ -25,12 +25,12 @@ Translates text to a certain language.
 **Example**  
 ```js
 var translated = await translate("Hello world", "fr");
-/* ⇒ 
+&#47;* ⇒ 
 {
  source: "en", 
  original: "Hello world",
  translated: "Bonjour le monde",
  result: "weird google stuff here"
 }
-*\/
+*&#47;
 ```
